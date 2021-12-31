@@ -16,9 +16,25 @@
   },
   "register": {
     "TOS": "",
-    "accept": ""
+    "accept": "",
+    "name": "نام",
+    "email": "ایمیل",
+    "age": "سن",
+    "password": "رمز عبور",
+    "confirm_password": "تکرار رمز عبور",
+    "country": "کشور شما",
+    "submit": "ورود"
   },
   "song": {
     "comment_count": ""
+  },
+  "auth": {
+    "register": "ثبت نام",
+    "login": "ورود"
+  },
+  "login": {
+    "email": "ایمیل",
+    "password": "رمز عبور",
+    "submit": "ورود"
   }
 }

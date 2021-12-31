@@ -16,9 +16,25 @@
   },
   "register": {
     "TOS": "Terms of Service",
-    "accept": "I accept Music's {0}"
+    "accept": "I accept Music's {0}",
+    "name": "Name",
+    "email": "Email",
+    "age": "Age",
+    "password": "Password",
+    "confirm_password": "Confirm Password",
+    "country": "Country",
+    "submit": "Submit"
   },
   "song": {
     "comment_count": "No comments | 1 Comment | {count} Comments"
+  },
+  "auth": {
+    "register": "Register",
+    "login": "Login"
+  },
+  "login": {
+    "email": "Email",
+    "password": "Password",
+    "submit": "Submit"
   }
 }

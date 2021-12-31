@@ -34,7 +34,7 @@
                   'hover:text-white text-white bg-blue-600': tab === 'login',
                   'hover:text-blue-600': tab === 'register'
                 }">
-                Login
+                {{ $t('auth.login') }}
               </a>
             </li>
             <li class="flex-auto text-center">
@@ -43,7 +43,7 @@
                 :class="{
                   'hover:text-white text-white bg-blue-600': tab === 'register',
                   'hover:text-blue-600': tab === 'login'
-                }">Register</a>
+                }">{{ $t('auth.register') }}</a>
             </li>
           </ul>
 
