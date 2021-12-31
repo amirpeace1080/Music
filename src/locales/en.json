@@ -1,9 +1,18 @@
 {
+  "header": {
+    "about": "About",
+    "login_register": "Login / Register",
+    "manage": "Manage",
+    "logout": "Logout"
+  },
   "home": {
-    "listen": "Listen to Great Music!"
+    "listen": "Welcom to Amir music",
+    "songs": "Songs",
+    "content": "A few points about the site 1. The filter breaker must be turned on 2. The main part of the site is the management section, which you must register to open your access 3. The server is free, the speed for playing the song is a little low, please be patient :)"
   },
   "manage": {
-    "my_songs": "My Songs"
+    "my_songs": "My Songs",
+    "upload": "Upload"
   },
   "register": {
     "TOS": "Terms of Service",

@@ -14,23 +14,25 @@
           <!-- Navigation Links -->
           <li>
             <router-link class="px-2 text-white" :to="{ name: 'about' }">
-              About
+              {{ $t('header.about') }}
             </router-link>
           </li>
           <li v-if="!userLoggedIn">
             <a class="px-2 text-white" href="#" @click.prevent="toggleAuthModal">
-              Login / Register
+              {{ $t('header.login_register') }}
             </a>
           </li>
           <template v-else>
             <li>
               <router-link class="px-2 text-white" :to="{ name: 'manage' }">
-                Manage
+                {{ $t('header.manage') }}
               </router-link>
             </li>
             <li>
               <a class="px-2 text-white" href="#"
-                @click.prevent="signout">Logout</a>
+                @click.prevent="signout">
+                {{ $t('header.logout') }}
+              </a>
             </li>
           </template>
         </ul>
@@ -54,7 +56,7 @@ export default {
   computed: {
     ...mapState(['userLoggedIn']),
     currentLocale() {
-      return this.$i18n.locale === 'fr' ? 'French' : 'English';
+      return this.$i18n.locale === 'fa' ? 'فارسی' : 'English';
     },
   },
   methods: {
@@ -71,7 +73,7 @@ export default {
       }
     },
     changeLocale() {
-      this.$i18n.locale = this.$i18n.locale === 'fr' ? 'en' : 'fr';
+      this.$i18n.locale = this.$i18n.locale === 'fa' ? 'en' : 'fa';
     },
     // toggleAuthModal() {
     //   this.$store.commit('toggleAuthModal');
