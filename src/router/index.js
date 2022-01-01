@@ -8,7 +8,7 @@ import store from '@/store';
 const routes = [
   {
     name: 'home',
-    path: '/', // example.com/
+    path: '/',
     component: Home,
   },
   {
@@ -18,14 +18,12 @@ const routes = [
   },
   {
     name: 'manage',
-    // alias: '/manage',
     path: '/manage-music',
     meta: {
       requiresAuth: true,
     },
     component: Manage,
     beforeEnter: (to, from, next) => {
-      console.log('Manage Route Guard');
       next();
     },
   },
@@ -51,7 +49,6 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  // console.log(to.matched);
 
   if (!to.matched.some((record) => record.meta.requiresAuth)) {
     next();
