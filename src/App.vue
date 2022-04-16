@@ -10,7 +10,6 @@
   <app-player />
 
   <auth-modal />
-
 </template>
 
 <script>
@@ -27,6 +26,7 @@ export default {
   },
   created() {
     this.$store.dispatch('init_login');
+    alert('لطفا برای بهتر کار کردن سایت حتما فیلترشکن خودرا روشن نمایید');
   },
 };
 </script>

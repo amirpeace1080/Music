@@ -1,8 +1,6 @@
 <template>
   <div>
-    <nav
-      class="nav py-5 flex flex-wrap items-center justify-between px-4 bg-gray-700"
-    >
+    <nav class="nav py-5 flex flex-wrap items-center justify-between px-4 bg-gray-700">
       <!-- App Name -->
       <router-link
         class="text-white font-bold uppercase text-2xl mr-4"
@@ -21,28 +19,26 @@
         <span class="navicon bg-grey-darkest flex items-center relative"></span>
       </label>
 
-      <ul
-        class="menu border-b md:border-none flex justify-end list-reset m-0 w-full md:w-auto"
-      >
+      <ul class="menu border-b md:border-none flex justify-end list-reset m-0 w-full md:w-auto">
         <li>
           <router-link class="px-2 text-white" :to="{ name: 'about' }">
-            {{ $t("header.about") }}
+            {{ $t('header.about') }}
           </router-link>
         </li>
         <li v-if="!userLoggedIn">
           <a class="px-2 text-white" href="#" @click.prevent="toggleAuthModal">
-            {{ $t("header.login_register") }}
+            {{ $t('header.login_register') }}
           </a>
         </li>
         <template v-else>
           <li>
             <router-link class="px-2 text-white" :to="{ name: 'manage' }">
-              {{ $t("header.manage") }}
+              {{ $t('header.manage') }}
             </router-link>
           </li>
           <li>
             <a class="px-2 text-white" href="#" @click.prevent="signout">
-              {{ $t("header.logout") }}
+              {{ $t('header.logout') }}
             </a>
           </li>
         </template>
@@ -59,31 +55,31 @@
 </template>
 
 <script>
-import { mapMutations, mapState } from "vuex";
+import { mapMutations, mapState } from 'vuex';
 
 export default {
-  name: "Header",
+  name: 'Header',
   computed: {
-    ...mapState(["userLoggedIn"]),
+    ...mapState(['userLoggedIn']),
     currentLocale() {
-      return this.$i18n.locale === "fa" ? "فارسی" : "English";
+      return this.$i18n.locale === 'fa' ? 'فارسی' : 'English';
     },
   },
   methods: {
-    ...mapMutations(["toggleAuthModal"]),
+    ...mapMutations(['toggleAuthModal']),
     signout() {
-      this.$store.dispatch("signout", {
+      this.$store.dispatch('signout', {
         router: this.$router,
         route: this.$route,
       });
 
       // console.log(this.$route);
       if (this.$route.meta.requiresAuth) {
-        this.$router.push({ name: "home" });
+        this.$router.push({ name: 'home' });
       }
     },
     changeLocale() {
-      this.$i18n.locale = this.$i18n.locale === "fa" ? "en" : "fa";
+      this.$i18n.locale = this.$i18n.locale === 'fa' ? 'en' : 'fa';
     },
     // toggleAuthModal() {
     //   this.$store.commit('toggleAuthModal');
@@ -106,7 +102,7 @@ export default {
     width: 100%;
     height: 100%;
     transition: all 0.2s ease-out;
-    content: "";
+    content: '';
     background: #3d4852;
   }
 

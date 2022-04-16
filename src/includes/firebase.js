@@ -4,12 +4,12 @@ import 'firebase/firestore';
 import 'firebase/storage';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyALx3wqi7HVELVSuglFI7pTW7bKzUxX3cQ",
-  authDomain: "music-1131d.firebaseapp.com",
-  projectId: "music-1131d",
-  storageBucket: "music-1131d.appspot.com",
-  messagingSenderId: "273183987311",
-  appId: "1:273183987311:web:b95af354e5df7630585f9a",
+  apiKey: 'AIzaSyALx3wqi7HVELVSuglFI7pTW7bKzUxX3cQ',
+  authDomain: 'music-1131d.firebaseapp.com',
+  projectId: 'music-1131d',
+  storageBucket: 'music-1131d.appspot.com',
+  messagingSenderId: '273183987311',
+  appId: '1:273183987311:web:b95af354e5df7630585f9a',
 };
 
 // Initialize Firebase
@@ -28,10 +28,5 @@ const songsCollection = db.collection('songs');
 const commentsCollection = db.collection('comments');
 
 export {
-  auth,
-  db,
-  usersCollection,
-  songsCollection,
-  commentsCollection,
-  storage,
+  auth, db, usersCollection, songsCollection, commentsCollection, storage,
 };
